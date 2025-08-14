@@ -1,0 +1,345 @@
+:root {
+  --violet: #8a3dd8;
+  --dark-blue: #3816cee7;
+  --yellow: #f1da7b;
+  --light-violet: #aa3483;
+  --white: #ffffff;
+  --black: #0a0a0a;
+  --gray: #83a6f8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, var(--dark-blue), var(--light-violet));
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: var(--white);
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+/* Dark/Light Mode Toggle */
+body.light-mode {
+  background: #7d60ff;
+  color: var(--black);
+}
+
+body.light-mode header,
+body.light-mode footer {
+    background: #9d62fc;;
+  color: var(--black); 
+}
+
+body.light-mode .nav-links a,
+body.light-mode .logo {
+  color: var(--black);
+}
+
+body.light-mode .project-card,
+body.light-mode .hero {
+  background: #ac6cff;;
+  color: var(--blue);
+}
+
+#toggle-theme {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  z-index: 1001;
+  background: var(--light-violet);
+  color: var(--blue);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background-color: var(--violet);
+  padding: 1rem 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--yellow);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--yellow);
+  text-shadow: 0 0 5px var(--yellow);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.show {
+  display: flex !important;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--light-violet), var(--dark-blue));
+  text-align: center;
+  padding: 4rem 1rem;
+  animation: fadeIn 2s ease-out;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: var(--yellow);
+  margin-bottom: 1rem;
+}
+
+/* Section */
+.section {
+  padding: 3rem 0;
+}
+
+.section h2 {
+  text-align: center;
+  color: var(--yellow);
+  margin-bottom: 2rem;
+}
+
+.alt-section {
+  background-color: #1e293b;
+}
+
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.skill h3 {
+  margin-bottom: 0.4rem;
+}
+
+.bar {
+  width: 100%;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+  margin-bottom: 1rem;
+}
+
+.fill {
+  background: var(--yellow);
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project-card {
+  background-color: var(--violet);
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: var(--white);
+  box-shadow: 0 0 15px rgb(0, 0, 0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(79, 214, 255, 0.986);
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 8px rgba(211, 79, 79, 0.3);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background: var(--white);
+  color: var(--black);
+  margin: 10% auto;
+  padding: 2rem;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.modal .close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #444;
+}
+
+/* Contact */
+#contact p, #contact a {
+  text-align: center;
+  display: block;
+  margin: 0.5rem 0;
+  text-decoration: none;
+  color: var(--yellow);
+}
+
+/* Social Icons */
+.social-icons {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: var(--yellow);
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--white);
+}
+
+/* Footer */
+footer {
+  background-color: var(--violet);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+
+.primary-btn {
+  background-color: var(--yellow);
+  color: var(--dark-blue);
+  box-shadow: 0 5px 15px rgba(255, 224, 100, 0.5);
+}
+
+.primary-btn:hover {
+  background-color: var(--white);
+  color: var(--dark-blue);
+}
+
+/* Scroll to Top */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--violet);
+  color: var(--yellow);
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 999;
+}
+
+.scroll-top-btn:hover {
+  background-color: var(--light-violet);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popUp {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-on-load { opacity: 0; animation: fadeInUp 1s ease-out forwards; }
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.4s; }
+.animate-delay-3 { animation-delay: 0.5 }

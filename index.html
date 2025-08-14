@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sahil Akhade | Portfolio</title>
+  <meta name="description" content="Portfolio of Sahil Akhade - Graphic Designer, Video Editor & Web Developer" />
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <button id="toggle-theme" title="Toggle Dark/Light Mode">🌓</button>
+
+  <!-- Header -->
+  <header class="animate-on-load animate-delay-1 pop-up pop-delay-1">
+    <div class="container">
+      <h1 class="logo">EXPLORER</h1>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero animate-on-load animate-delay-2 pop-up pop-delay-2">
+    <div class="container">
+      <h2>Hello, I'm Sahil Akhade</h2>
+      <p>I’m a Graphic Designer & Video Editor, also a Web Developer. Passionate about building bold digital experiences.</p>
+      <a href="\\server\Billing\SAHIL\SALES BONUS LETTER SIMPLE\Good morning self.docx" download class="btn primary-btn">Download Resume</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section animate-on-load animate-delay-3 pop-up pop-delay-3">
+    <div class="container">
+      <h1>About Me</h1>
+      <p>I’m a passionate Graphic Designer with a strong foundation in visual storytelling, branding, and digital design. I specialize in industry-standard tools like Adobe Illustrator, InDesign, Photoshop, CorelDRAW, and more — blending creativity with technical skill to bring bold ideas to life.
+
+In addition to design, I’ve also worked with Premiere Pro and Adobe Audition, allowing me to explore video editing and audio design as part of more dynamic, multimedia projects.
+
+I enjoy solving problems with both design and code, combining aesthetics with functionality to create work that’s not just visually appealing but purpose-driven. I'm constantly exploring new techniques and tools to grow as a creative — whether that’s in layout design, branding, or digital media</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2>My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">
+          <h3>Adobe Photoshop</h3>
+          <div class="bar"><div class="fill" style="width: 90%"></div></div>
+        </div>
+        <div class="skill">
+          <h3>InDesign</h3>
+          <div class="bar"><div class="fill" style="width: 85%"></div></div>
+        </div>
+        <div class="skill">
+          <h3>HTML/CSS</h3>
+          <div class="bar"><div class="fill" style="width: 80%"></div></div>
+        </div>
+        <div class="skill">
+          <h3>Video Editing</h3>
+          <div class="bar"><div class="fill" style="width: 75%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Projects Section -->
+<section id="projects" class="section alt-section animate-on-load animate-delay-4">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="projects-grid"> 
+      <div class="project-card pop-up pop-delay-1" onclick="openModal('modal1')">
+        <img src="IMAGE\Tablemenu.jpg" alt="Table Menu Design" class="project-img" />
+        <h3>Project One</h3>
+        <p>A Simple and Easy fill-up Table Menu.</p>
+      </div>
+      <div class="project-card pop-up pop-delay-2" onclick="openModal('modal2')">
+        <img src="image\milli.jpg" alt="InDesign Poster" class="project-img" />
+        <h3>Project Two</h3>
+        <p>A millionaire magazine poster, made in InDesign.</p>
+      </div>
+      <div class="project-card pop-up pop-delay-3" onclick="openModal('modal3')">
+        <img src="image\web.png" alt="Web Portfolio" class="project-img" />
+        <h3>Project Three</h3>
+        <p>An elegant and beautiful portfolio page built with HTML & CSS.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Project Modals -->
+  <div class="modal" id="modal1">
+    <div class="modal-content">
+      <span class="close" data-modal="modal1">&times;</span>
+      <h2>Project One</h2>
+      <p>This is a more detailed view of Project One. It includes extra info, tools used, and creative challenges solved.</p>
+    </div>
+  </div>
+  <div class="modal" id="modal2">
+    <div class="modal-content">
+      <span class="close" data-modal="modal2">&times;</span>
+      <h2>Project Two</h2>
+      <p>Magazine design made with Adobe InDesign. Focused on luxury editorial layout and visual hierarchy.</p>
+    </div>
+  </div>
+  <div class="modal" id="modal3">
+    <div class="modal-content">
+      <span class="close" data-modal="modal3">&times;</span>
+      <h2>Project Three</h2>
+      <p>A responsive personal portfolio built with HTML, CSS. Elegant, clean and performance-optimized.</p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section animate-on-load animate-delay-5 pop-up pop-delay-2">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:sahilakhade143@gmail.com">sahilakhade143@gmail.com</a></p>
+      <p>Phone: <a href="tel:9082377546">9082377546</a></p>
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://behance.net/yourprofile" target="_blank"><i class="fab fa-behance"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="animate-on-load animate-delay-6 pop-up pop-delay-3">
+    <div class="container">
+      <p>&copy; 2025 SAHIL AKHADE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button onclick="scrollToTop()" class="scroll-top-btn" title="Go to top">↑</button>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+
+    window.onscroll = function () {
+      document.querySelector(".scroll-top-btn").style.display =
+        window.scrollY > 200 ? "block" : "none";
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Hamburger
+    document.getElementById("hamburger").onclick = () => {
+      document.getElementById("navLinks").classList.toggle("show");
+    };
+
+    // Theme toggle
+    document.getElementById("toggle-theme").onclick = () => {
+      document.body.classList.toggle("light-mode");
+    };
+
+    // Modal functions
+    function openModal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+
+    document.querySelectorAll('.close').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById(btn.dataset.modal).style.display = 'none';
+      });
+    });
+
+    window.onclick = function(event) {
+      document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target === modal) modal.style.display = "none";
+      });
+    };
+  </script>
+</body>
+</html>
