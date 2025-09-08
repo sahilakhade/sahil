@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sahil Akhade | Portfolio</title>
   <meta name="description" content="Portfolio of Sahil Akhade - Graphic Designer, Video Editor & Web Developer" />
+  <meta name="keywords" content="Portfolio, Graphic Design, Web Development, Video Editing, SEO, Sahil Akhade">
+  <meta property="og:title" content="Sahil Akhade | Portfolio">
+  <meta property="og:description" content="Graphic Designer, Web Developer & Video Editor">
+  <meta property="og:image" content="images/web.png">
+  <meta property="og:type" content="website">
   <link rel="icon" href="favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
@@ -12,43 +17,45 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
 
   <!-- Dark Mode Toggle -->
-  <button id="toggle-theme" title="Toggle Dark/Light Mode">🌓</button>
+  <button id="toggle-theme" title="Switch Theme" aria-label="Toggle Dark/Light Mode" aria-pressed="false">🌙</button>
 
   <!-- Header -->
   <header class="animate-on-load animate-delay-1 pop-up pop-delay-1">
     <div class="container">
       <h1 class="logo">EXPLORER</h1>
-      <nav>
+      <nav role="navigation">
         <ul class="nav-links" id="navLinks">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="hamburger" id="hamburger">&#9776;</div>
+        <div class="hamburger" id="hamburger" aria-label="Menu">&#9776;</div>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero animate-on-load animate-delay-2 pop-up pop-delay-2">
-    <div class="container">
-      <h2>Hello, I'm Sahil Akhade</h2>
-      <p>I’m a Graphic Designer & Video Editor, also a Web Developer. Passionate about building bold digital experiences.</p>
-     <a href="resume.docx" download class="btn primary-btn">Download Resume</a>
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <h2 id="typewriter"></h2>
+    <p>Web Developer | Graphic Enthusiast | Creative Designer</p>
+    <a href="sahil.pdf" class="btn primary-btn" download>📄 Download Resume</a>
   </section>
 
   <!-- About Section -->
   <section id="about" class="section animate-on-load animate-delay-3 pop-up pop-delay-3">
     <div class="container">
-      <h1>About Me</h1>
-      <p>I’m a passionate Graphic Designer with a strong foundation in visual storytelling, branding, and digital design. I specialize in industry-standard tools like Adobe Illustrator, InDesign, Photoshop, CorelDRAW, and more — blending creativity with technical skill to bring bold ideas to life.
+      <h2>About Me</h2>
+      <p>I am a passionate Graphic Designer with a strong foundation in visual storytelling, branding, and digital design. Skilled in industry-standard tools such as Adobe Illustrator, InDesign, Photoshop, and CorelDRAW, I seamlessly blend creativity with technical expertise to transform bold ideas into impactful visuals.
 
-In addition to design, I’ve also worked with Premiere Pro and Adobe Audition, allowing me to explore video editing and audio design as part of more dynamic, multimedia projects.
+Beyond design, my experience with Premiere Pro and Adobe Audition has allowed me to expand into video editing and audio design, crafting dynamic multimedia projects that engage and inspire. I thrive on solving problems through both design and code—balancing aesthetics with functionality to create work that is not only visually captivating but also purpose-driven.
 
-I enjoy solving problems with both design and code, combining aesthetics with functionality to create work that’s not just visually appealing but purpose-driven. I'm constantly exploring new techniques and tools to grow as a creative — whether that’s in layout design, branding, or digital media</p>
+Constantly exploring new techniques and tools, I am dedicated to evolving as a creative professional—whether in layout design, branding, or the broader world of digital media.</p>
     </div>
   </section>
 
@@ -58,81 +65,101 @@ I enjoy solving problems with both design and code, combining aesthetics with fu
       <h2>My Skills</h2>
       <div class="skills-grid">
         <div class="skill">
-          <h3>Adobe Photoshop</h3>
-          <div class="bar"><div class="fill" style="width: 90%"></div></div>
-        </div>
-        <div class="skill">
-          <h3>InDesign</h3>
-          <div class="bar"><div class="fill" style="width: 85%"></div></div>
+          <h3>Graphic Design</h3>
+          <div class="bar">
+            <div class="fill" data-skill="93"></div>
+          </div>
         </div>
         <div class="skill">
           <h3>HTML/CSS</h3>
-          <div class="bar"><div class="fill" style="width: 80%"></div></div>
+          <div class="bar">
+            <div class="fill" data-skill="81"></div>
+          </div>
         </div>
         <div class="skill">
           <h3>Video Editing</h3>
-          <div class="bar"><div class="fill" style="width: 75%"></div></div>
+          <div class="bar">
+            <div class="fill" data-skill="69"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>S.E.O</h3>
+          <div class="bar">
+            <div class="fill" data-skill="54"></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-<!-- Projects Section -->
-<section id="projects" class="section alt-section animate-on-load animate-delay-4">
-  <div class="container">
-    <h2>Projects</h2>
-    <div class="projects-grid"> 
-      <div class="project-card pop-up pop-delay-1" onclick="openModal('modal1')">
-        <img src="image/tablemenu.jpg" alt="Table Menu Design" class="project-img" />
-        <h3>Project One</h3>
-        <p>A Simple and Easy fill-up Table Menu.</p>
-      </div>
-      <div class="project-card pop-up pop-delay-2" onclick="openModal('modal2')">
-        <img src="image/milli.jpg" alt="InDesign Poster" class="project-img" />
-        <h3>Project Two</h3>
-        <p>A millionaire magazine poster, made in InDesign.</p>
-      </div>
-      <div class="project-card pop-up pop-delay-3" onclick="openModal('modal3')">
-        <img src="image/web.png" alt="Web Portfolio" class="project-img" />
-        <h3>Project Three</h3>
-        <p>An elegant and beautiful portfolio page built with HTML & CSS.</p>
+  <!-- Floating Buttons -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/919082377546" target="_blank" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="mailto:sahilakhade143@gmail.com" aria-label="Send Email">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+  </div>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section alt-section animate-on-load animate-delay-4">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card pop-up pop-delay-1" onclick="openModal('modal1')">
+          <img src="image\tablemenu.jpg" alt="Table Menu Design" class="project-img" loading="lazy"/>
+          <h3>Project One</h3>
+          <p>A sleek and modern Fill-Up Table Menu, designed with simplicity and precision to ensure both beauty and functionality. Seamlessly crafted in WordPress, it offers a smooth, user-friendly experience that enhances usability while maintaining elegance. Every element is thoughtfully structured, blending clean design with intuitive navigation to create an engaging and professional interface. This menu not only elevates the overall aesthetic but also provides a practical, efficient solution for presenting information with style and clarity.</p>
+        </div>
+        <div class="project-card pop-up pop-delay-2" onclick="openModal('modal2')">
+          <img src="image\milli.jpg" alt="InDesign Poster" class="project-img" loading="lazy"/>
+          <h3>Project Two</h3>
+          <p>A captivating Millionaire Magazine poster, meticulously crafted in Adobe InDesign with precision and creativity. Blending bold typography with luxurious visual elements, the design exudes elegance, sophistication, and prestige. Thoughtfully aligned details and a seamless balance of modern aesthetics with timeless class make this poster a true statement of refined design excellence.</p>
+        </div>
+        <div class="project-card pop-up pop-delay-3" onclick="openModal('modal3')">
+          <img src="image\web.png" alt="Portfolio Website Screenshot" class="project-img" loading="lazy"/>
+          <h3>Project Three</h3>
+          <p>An elegant and visually captivating portfolio page, thoughtfully built with the power of HTML and CSS. Designed with a seamless balance of creativity and precision, it highlights both modern aesthetics and smooth functionality. The layout flows effortlessly, ensuring an engaging user experience while showcasing work in a polished manner. Every element has been carefully styled to reflect sophistication, beauty, and professionalism. This portfolio page is not just a design—it’s a statement of artistry and technical excellence.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Project Modals -->
-  <div class="modal" id="modal1">
+  <div class="modal" id="modal1" role="dialog" aria-modal="true">
     <div class="modal-content">
       <span class="close" data-modal="modal1">&times;</span>
       <h2>Project One</h2>
       <p>This is a more detailed view of Project One. It includes extra info, tools used, and creative challenges solved.</p>
     </div>
   </div>
-  <div class="modal" id="modal2">
+  <div class="modal" id="modal2" role="dialog" aria-modal="true">
     <div class="modal-content">
       <span class="close" data-modal="modal2">&times;</span>
       <h2>Project Two</h2>
       <p>Magazine design made with Adobe InDesign. Focused on luxury editorial layout and visual hierarchy.</p>
     </div>
   </div>
-  <div class="modal" id="modal3">
+  <div class="modal" id="modal3" role="dialog" aria-modal="true">
     <div class="modal-content">
       <span class="close" data-modal="modal3">&times;</span>
       <h2>Project Three</h2>
-      <p>A responsive personal portfolio built with HTML, CSS. Elegant, clean and performance-optimized.</p>
+      <p>A responsive personal portfolio built with HTML & CSS. Elegant, clean and performance-optimized.</p>
     </div>
   </div>
 
   <!-- Contact Section -->
-  <section id="contact" class="section animate-on-load animate-delay-5 pop-up pop-delay-2">
+  <section id="contact" class="section">
     <div class="container">
       <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:sahilakhade143@gmail.com">sahilakhade143@gmail.com</a></p>
-      <p>Phone: <a href="tel:9082377546">9082377546</a></p>
       <div class="social-icons">
-        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://behance.net/yourprofile" target="_blank"><i class="fab fa-behance"></i></a>
+        <a href="https://www.linkedin.com/in/sahil-narayan-akhade-0b65782a8" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:sahilakhade143@gmail.com" target="_blank" rel="noopener" aria-label="Email Sahil">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
       </div>
     </div>
   </section>
@@ -145,48 +172,10 @@ I enjoy solving problems with both design and code, combining aesthetics with fu
   </footer>
 
   <!-- Scroll to Top Button -->
-  <button onclick="scrollToTop()" class="scroll-top-btn" title="Go to top">↑</button>
+  <a href="#" class="scroll-top-btn" title="Go to top"><i class="fas fa-level-up-alt"></i></a>
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init();
-
-    window.onscroll = function () {
-      document.querySelector(".scroll-top-btn").style.display =
-        window.scrollY > 200 ? "block" : "none";
-    };
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Hamburger
-    document.getElementById("hamburger").onclick = () => {
-      document.getElementById("navLinks").classList.toggle("show");
-    };
-
-    // Theme toggle
-    document.getElementById("toggle-theme").onclick = () => {
-      document.body.classList.toggle("light-mode");
-    };
-
-    // Modal functions
-    function openModal(id) {
-      document.getElementById(id).style.display = 'block';
-    }
-
-    document.querySelectorAll('.close').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.getElementById(btn.dataset.modal).style.display = 'none';
-      });
-    });
-
-    window.onclick = function(event) {
-      document.querySelectorAll('.modal').forEach(modal => {
-        if (event.target === modal) modal.style.display = "none";
-      });
-    };
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
